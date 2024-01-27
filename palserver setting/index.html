@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<!--作者：陳佳佑(aabb987)-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css.css">
+    <title>PalSetting</title>
+</head>
+<body>
+    <!--標題-->
+    <header class = HeaderTop>  
+        <h10>PalServer setting</h10>
+    </header>
+    <br><br>
+    <!--說明-->
+        <p>使用方式：在對應的輸入格輸入你要的值，</p>
+        <p>如果預設值是Flase或是True，輸入選擇只有Flase和True。</p>
+        <p>如果預設值是1.000000，只需輸入常數即可。</p>
+        <p>設好後滑到最下面點選Output按鈕，之後網頁會輸出設定檔的內容，</p>
+        <p>將其內容包括[/Script/Pal.PalGameWorldSettings]複製到Pal/Saved/Config/WindowsServer/PalWorldSettings.ini裡面</p>
+        <br>
+    <!--輸入內容-->
+        <p>Difficulty 遊戲難度：預設值為None</p>
+        <p><input type="text" id="Difficulty" name="Difficulty" value="None"></p>
+        <br>
+
+        <p>DayTimeSpeedRate 白天消逝速度，決定白天的長度：預設值為1.000000</p>
+        <p><input type="text" id="DayTimeSpeedRate" name="DayTimeSpeedRate" value="1.000000"></p>
+        <br>
+
+        <p>DayTimeSpeedRate 夜晚消逝速度，決定夜晚的長度：預設值為1.000000</p>
+        <p><input type="text" id="NightTimeSpeedRate" name="NightTimeSpeedRate" value="1.000000"></p>
+        <br>
+
+        <p>ExpRate 經驗倍率，影響玩家和Pal的精案獲取倍率：預設值為1.000000</p>
+        <p><input type="text" id="ExpRate" name="ExpRate" value="1.000000"></p>
+        <br>
+        
+        <p>PalCaptureRate 野生Pal成功捕獲機率倍率，越高數值代表越容易捕獲：預設值為1.000000</p>
+        <p><input type="text" id="PalCaptureRate" name="PalCaptureRate" value="1.000000"></p>
+        <br>
+        
+        <p>PalSpawnNumRate 野生Pal生成數量(速度)：預設值為1.000000</p>
+        <p><input type="text" id="PalSpawnNumRate" name="PalSpawnNumRate" value="1.000000"></p>
+        <br>
+
+        <p>PalDamageRateAttack Pal造成的的傷害倍率：預設值為1.000000</p>
+        <p><input type="text" id="PalDamageRateAttack" name="PalDamageRateAttack" value="1.000000"></p>
+        <br>
+
+        <p>PalDamageRateDefense Pal受到傷害的倍率，提高玩家受到的傷害：預設值為1.000000</p>
+        <p><input type="text" id="PalDamageRateDefense" name="PalDamageRateDefense" value="1.000000"></p>
+        <br>
+
+        <p>PlayerDamageRateAttack 玩家的攻擊傷害倍率，提高玩家造成的傷害：預設值為1.000000</p>
+        <p><input type="text" id="PlayerDamageRateAttack" name="PlayerDamageRateAttack" value="1.000000"></p>
+        <br>
+
+        <p>PlayerDamageRateDefense 玩家受到傷害的倍率，提高玩家受到的傷害：預設值為1.000000</p>
+        <p><input type="text" id="PlayerDamageRateDefense" name="PlayerDamageRateDefense" value="1.000000"></p>
+        <br>
+        
+        <p>PlayerStomachDecreaceRate 玩家飽食度衰減率，減少飽食度消耗的速度：預設值為1.000000</p>
+        <p><input type="text" id="PlayerStomachDecreaceRate" name="PlayerStomachDecreaceRate" value="1.000000"></p>
+        <br>
+        
+        <p>PlayerStaminaDecreaceRate 玩家體力消耗倍率，減少體力消耗的速度：預設值為1.000000</p>
+        <p><input type="text" id="PlayerStaminaDecreaceRate" name="PlayerStaminaDecreaceRate" value="1.000000"></p>
+        <br>
+        
+        <p>PlayerAutoHPRegeneRate 玩家的HP被動回復速度：預設值為1.000000</p>
+        <p><input type="text" id="PlayerAutoHPRegeneRate" name="PlayerAutoHPRegeneRate" value="1.000000"></p>
+        <br>
+
+        <p>PlayerAutoHpRegeneRateInSleep 玩家睡眠時的HP被動回復速度：預設值為1.000000</p>
+        <p><input type="text" id="PlayerAutoHpRegeneRateInSleep" name="PlayerAutoHpRegeneRateInSleep" value="1.000000"></p>
+        <br>
+
+        <p>PalStomachDecreaceRate Pals飽食度衰減率，減少飽食度消耗的速度：預設值為1.000000</p>
+        <p><input type="text" id="PalStomachDecreaceRate" name="PalStomachDecreaceRate" value="1.000000"></p>
+        <br>
+
+        <p>PalStaminaDecreaceRate Pals體力消耗倍率，減少體力消耗的速度：預設值為1.000000</p>
+        <p><input type="text" id="PalStaminaDecreaceRate" name="PalStaminaDecreaceRate" value="1.000000"></p>
+        <br>
+
+        <p>PalAutoHPRegeneRate Pals的HP被動回復速度：預設值為1.000000</p>
+        <p><input type="text" id="PalAutoHPRegeneRate" name="PalAutoHPRegeneRate" value="1.000000"></p>
+        <br>
+
+        <p>PalAutoHpRegeneRateInSleep Pals睡眠時的HP被動回復速度：預設值為1.000000</p>
+        <p><input type="text" id="PalAutoHpRegeneRateInSleep" name="PalAutoHpRegeneRateInSleep" value="1.000000"></p>
+        <br>
+
+        <p>BuildObjectDamageRate 建築受到的傷害倍率：預設值為1.000000</p>
+        <p><input type="text" id="BuildObjectDamageRate" name="BuildObjectDamageRate" value="1.000000"></p>
+        <br>
+
+        <p>BuildObjectDeteriorationDamageRate 處於終端外面的建築生命衰減速度：預設值為1.000000</p>
+        <p><input type="text" id="BuildObjectDeteriorationDamageRate" name="BuildObjectDeteriorationDamageRate" value="1.000000"></p>
+        <br>
+        
+        <p>CollectionDropRate 可採集資源的掉落物品倍率：預設值為1.000000</p>
+        <p><input type="text" id="CollectionDropRate" name="CollectionDropRate" value="1.000000"></p>
+        <br>
+        
+        <p>CollectionObjectHpRate 可採集資源的生命倍率：預設值為1.000000</p>
+        <p><input type="text" id="CollectionObjectHpRate" name="CollectionObjectHpRate" value="1.000000"></p>
+        <br>
+        
+        <p>CollectionObjectRespawnSpeedRate 可採集資源的重新生成速度：預設值為1.000000</p>
+        <p><input type="text" id="CollectionObjectRespawnSpeedRate" name="CollectionObjectRespawnSpeedRate" value="1.000000"></p>
+        <br>
+
+        <p>EnemyDropItemRate 敵人掉落物倍率(不清楚是數量還是稀有物品機率)：預設值為1.000000</p>
+        <p><input type="text" id="EnemyDropItemRate" name="EnemyDropItemRate" value="1.000000"></p>
+        <br>
+
+        <p>DeathPenalty 死亡懲罰，預設為All，若要關閉請設成None：預設值為All</p>
+        <p><input type="text" id="DeathPenalty" name="DeathPenalty" value="All"></p>
+        <br>
+
+        <p>bEnablePlayerToPlayerDamage PVP傷害：預設值為False</p>
+        <p><input type="text" id="bEnablePlayerToPlayerDamage" name="bEnablePlayerToPlayerDamage" value="False"></p>
+        <br>
+        
+        <p>bEnableFriendlyFire 公會內PVP傷害：預設值為Flase</p>
+        <p><input type="text" id="bEnableFriendlyFire" name="bEnableFriendlyFire" value="False"></p>
+        <br>
+        
+        <p>bEnableInvaderEnemy 襲擊活動：預設值為None</p>
+        <p><input type="text" id="bEnableInvaderEnemy" name="bEnableInvaderEnemy" value="True"></p>
+        <br>
+        
+        <p>bActiveUNKO 不清楚：預設值為False</p>
+        <p><input type="text" id="bActiveUNKO" name="bActiveUNKO" value="False"></p>
+        <br>
+
+        <p>bEnableAimAssistPad 輔助瞄準：預設值為True</p>
+        <p><input type="text" id="bEnableAimAssistPad" name="bEnableAimAssistPad" value="True"></p>
+        <br>
+
+        <p>bEnableAimAssistKeyboard 輔助瞄準：預設值為False</p>
+        <p><input type="text" id="bEnableAimAssistKeyboard" name="bEnableAimAssistKeyboard" value="False"></p>
+        <br>
+
+        <p>DropItemMaxNum 地面上能存在的最大物品數目：預設值為3000</p>
+        <p><input type="text" id="DropItemMaxNum" name="DropItemMaxNum" value="3000"></p>
+        <br>
+        
+        <p>DropItemMaxNum_UNKO 不清楚：預設值為100</p>
+        <p><input type="text" id="DropItemMaxNum_UNKO" name="DropItemMaxNum_UNKO" value="100"></p>
+        <br>
+        
+        <p>BaseCampMaxNum 據點的最大數目：預設值為128</p>
+        <p><input type="text" id="BaseCampMaxNum" name="BaseCampMaxNum" value="128"></p>
+        <br>
+        
+        <p>BaseCampWorkerMaxNum 據點裡工作者的最大數目：預設值為15</p>
+        <p><input type="text" id="BaseCampWorkerMaxNum" name="BaseCampWorkerMaxNum" value="15"></p>
+        <br>
+
+        <p>DropItemAliveMaxHours 地面上物品的存在時間：預設值為1.000000</p>
+        <p><input type="text" id="DropItemAliveMaxHours" name="DropItemAliveMaxHours" value="1.000000"></p>
+        <br>
+
+        <p>bAutoResetGuildNoOnlinePlayers 當公會玩家都不在線上時，公會會自動解散：預設值為None</p>
+        <p><input type="text" id="bAutoResetGuildNoOnlinePlayers" name="bAutoResetGuildNoOnlinePlayers" value="False"></p>
+        <br>
+
+        <p>AutoResetGuildTimeNoOnlinePlayers 不清楚：預設值為72.000000</p>
+        <p><input type="text" id="AutoResetGuildTimeNoOnlinePlayers" name="AutoResetGuildTimeNoOnlinePlayers" value="72.000000"></p>
+        <br>
+        
+        <p>GuildPlayerMaxNum 公會最大人數：預設值為20</p>
+        <p><input type="text" id="GuildPlayerMaxNum" name="GuildPlayerMaxNum" value="20"></p>
+        <br>
+        
+        <p>PalEggDefaultHatchingTime Pal蛋的孵化所需時間：預設值為72.000000</p>
+        <p><input type="text" id="PalEggDefaultHatchingTime" name="PalEggDefaultHatchingTime" value="72.000000"></p>
+        <br>
+        
+        <p>WorkSpeedRate 工作速度：預設值為None</p>
+        <p><input type="text" id="WorkSpeedRate" name="WorkSpeedRate" value="1.000000"></p>
+        <br>
+
+        <p>bIsMultiplay 不清楚：預設值為False</p>
+        <p><input type="text" id="bIsMultiplay" name="bIsMultiplay" value="False"></p>
+        <br>
+
+        <p>bIsPvP 不清楚：預設值為False</p>
+        <p><input type="text" id="bIsPvP" name="bIsPvP" value="False"></p>
+        <br>
+
+        <p>bCanPickupOtherGuildDeathPenaltyDrop 能否拿取非自身公會的死亡掉落物：預設值為None</p>
+        <p><input type="text" id="bCanPickupOtherGuildDeathPenaltyDrop" name="bCanPickupOtherGuildDeathPenaltyDrop" value="False"></p>
+        <br>
+        
+        <p>bEnableNonLoginPenalty 不清楚：預設值為True</p>
+        <p><input type="text" id="bEnableNonLoginPenalty" name="bEnableNonLoginPenalty" value="True"></p>
+        <br>
+        
+        <p>bEnableFastTravel 是否能使用錨點進行快速移動：預設值為True</p>
+        <p><input type="text" id="bEnableFastTravel" name="bEnableFastTravel" value="True"></p>
+        <br>
+        
+        <p>bIsStartLocationSelectByMap 不清楚：預設值為True</p>
+        <p><input type="text" id="bIsStartLocationSelectByMap" name="bIsStartLocationSelectByMap" value="True"></p>
+        <br>
+
+        <p>bExistPlayerAfterLogout 不清楚：預設值為False</p>
+        <p><input type="text" id="bExistPlayerAfterLogout" name="bExistPlayerAfterLogout" value="False"></p>
+        <br>
+
+        <p>bEnableDefenseOtherGuildPlayer 不清楚：預設值為False</p>
+        <p><input type="text" id="bEnableDefenseOtherGuildPlayer" name="bEnableDefenseOtherGuildPlayer" value="False"></p>
+        <br>
+        
+        <p>CoopPlayerMaxNum 在邀請碼模式下能遊玩的最大玩家數量：預設值為4</p>
+        <p><input type="text" id="CoopPlayerMaxNum" name="CoopPlayerMaxNum" value="4"></p>
+        <br>
+        
+        <p>ServerPlayerMaxNum 在伺服器模式下能遊玩的最大玩家數量：預設值為32</p>
+        <p><input type="text" id="ServerPlayerMaxNum" name="ServerPlayerMaxNum" value="32"></p>
+        <br>
+        
+        <p>ServerName 伺服器名字：預設值為Default Palworld Server</p>
+        <p><input type="text" id="ServerName" name="ServerName" value="Default Palworld Server"></p>
+        <br>
+
+        <p>ServerDescription 伺服器介紹：預設值為"" </p>
+        <p><input type="text" id="ServerDescription" name="ServerDescription" value=""></p>
+        <br>
+
+        <p>AdminPassword 獲取管理員權限的密碼：預設值為""</p>
+        <p><input type="text" id="AdminPassword" name="AdminPassword" value=""></p>
+        <br>
+        
+        <p>ServerPassword 進入伺服器的密碼：預設值為""</p>
+        <p><input type="text" id="ServerPassword" name="ServerPassword" value=""></p>
+        <br>
+        
+        <p>PublicPort 伺服器Port：預設值為8211</p>
+        <p><input type="text" id="PublicPort" name="PublicPort" value="8211"></p>
+        <br>
+        
+        <p>PublicIP 伺服器位址：預設值為""</p>
+        <p><input type="text" id="PublicIP" name="PublicIP" value=""></p>
+        <br>
+
+        <p>RCONEnabled 不清楚：預設值為False</p>
+        <p><input type="text" id="RCONEnabled" name="RCONEnabled" value="False"></p>
+        <br>
+
+        <p>RCONPort 不清楚：預設值為25575</p>
+        <p><input type="text" id="RCONPort" name="RCONPort" value="25575"></p>
+        <br>
+        
+        <p>Region 區域：預設值為""</p>
+        <p><input type="text" id="Region" name="Region" value=""></p>
+        <br>
+        
+        <p>bUseAuth 不清楚：預設值為True</p>
+        <p><input type="text" id="bUseAuth" name="bUseAuth" value="True"></p>
+        <br>
+
+        <p><button id="outputworldsetting">Output</button></p>
+    <!--輸出內容-->
+        <p>[/Script/Pal.PalGameWorldSettings]</p>
+        <p><output id="setting"></output></p>   
+
+    <script src="./app.js"></script>
+</body>
+</html>
